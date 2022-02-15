@@ -54,7 +54,7 @@ export default {
           to: { name: 'inspire' },
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
