@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - name: Setup `pnpm` for node 📦
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.20.3
+      
+      - name: Setup node ${{ matrix.node }} env 🏗
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'pnpm'
+          check-latest: true
+
+      - name: Install dependencies 👨🏻‍💻
+        run: pnpm install
+
+      - name: Run linter 👀
+        run: pnpm lint
+
+      - name: Run tests 🧪
+        run: pnpm test
