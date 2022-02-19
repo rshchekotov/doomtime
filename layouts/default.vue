@@ -10,7 +10,7 @@
           <img src="~assets/buefy.png" alt="Buefy" height="28" />
         </a>
 
-        <div class="navbar-burger">
+        <div class="navbar-burger" @click="active = !active">
           <span />
           <span />
           <span />
@@ -19,7 +19,7 @@
     </nav>
 
     <section class="main-content columns">
-      <aside class="column is-2 section">
+      <aside class="column is-2 section" v-if="active">
         <p class="menu-label is-hidden-touch">General</p>
         <ul class="menu-list">
           <li v-for="(item, key) of items" :key="key">
@@ -42,6 +42,7 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
+      active: true,
       items: [
         {
           title: 'Home',
@@ -49,9 +50,9 @@ export default {
           to: { name: 'index' },
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' },
+          title: 'Calendar',
+          icon: 'calendar-month-outline',
+          to: { name: 'calendar' },
         },
       ],
     };

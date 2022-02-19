@@ -1,21 +1,12 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <card title="Free" icon="github">
-        Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
+    <div class="columns">
+      <card class="column" title="Memorize" icon="https://tse1.mm.bing.net/th?id=OIP.uyLY_US9QbR0QZxRsyBjjgAAAA&pid=Api&f=1">
+        Memorize Manhwa Timer
       </card>
 
-      <card title="Responsive" icon="cellphone-link">
-        <b class="has-text-grey"> Every </b> component is responsive
-      </card>
-
-      <card title="Modern" icon="alert-decagram">
-        Built with <a href="https://vuejs.org/"> Vue.js </a> and
-        <a href="http://bulma.io/"> Bulma </a>
-      </card>
-
-      <card title="Lightweight" icon="arrange-bring-to-front">
-        No other internal dependency
+      <card class="column" title="Mercenary Enrollment" icon="https://tse2.mm.bing.net/th?id=OIP.QN10pmcSJfTFvEiQrgamRwHaKu&pid=Api&f=1">
+        Mercenary Enrollment Timer
       </card>
     </div>
   </section>

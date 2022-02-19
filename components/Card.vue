@@ -8,7 +8,8 @@
       </header>
       <div class="card-content">
         <div class="content has-text-centered">
-          <b-icon :icon="icon" size="is-large" type="is-primary" />
+          <!--<b-icon :icon="icon" size="is-large" type="is-primary" />-->
+          <img class="manga-icon" :src="icon" :alt="title"/>
         </div>
       </div>
       <footer class="card-footer">
@@ -21,6 +22,13 @@
     </div>
   </div>
 </template>
+
+<style>
+.manga-icon {
+  min-width: 200px;
+  height: 300px;
+}
+</style>
 
 <script>
 export default {
