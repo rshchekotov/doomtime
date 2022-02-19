@@ -9,7 +9,7 @@
       <div class="card-content">
         <div class="content has-text-centered">
           <!--<b-icon :icon="icon" size="is-large" type="is-primary" />-->
-          <img class="manga-icon" :src="icon" :alt="title"/>
+          <img class="manga-icon" :src="icon" :alt="title" />
         </div>
       </div>
       <footer class="card-footer">
